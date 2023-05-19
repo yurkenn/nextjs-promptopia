@@ -1,4 +1,6 @@
 'use client';
+
+import { data } from 'autoprefixer';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
@@ -7,7 +9,12 @@ import React, { useEffect, useState } from 'react';
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const [copied, setCopied] = useState('');
   const { data: session } = useSession();
-  const router = useRouter();
+
+  const handleCopy = () => {
+    setCopied(post.prompt);
+    navigator.clipboard.writeText(post.prompt);
+    setTimeout(() => setCopied(''), 3000);
+  };
 
   return (
     <div className="prompt_card">
@@ -25,7 +32,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             <p className="font-inter text-sm text-gray-500">{session?.user?.email}</p>
           </div>
         </div>
-        <div className="copy_btn" onClick={() => {}}>
+        <div className="copy_btn" onClick={handleCopy}>
           <Image
             src={copied === post.prompt ? './assets/icons/tick.svg' : './assets/icons/copy.svg'}
             alt="copy"
