@@ -1,4 +1,4 @@
-# Promptopia - A Prompt Generator
+# Promptopia 
 
 ## Description
 
