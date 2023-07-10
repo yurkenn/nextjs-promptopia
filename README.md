@@ -9,6 +9,7 @@ Promptopia is an open-source AI prompting tool for modern world to discover, cre
 [https://nextjs-promptopia-tau.vercel.app/](https://nextjs-promptopia-tau.vercel.app/)
 
 ## Screenshots
+![Screenshot 2023-07-10 at 03 25 25](https://github.com/yurkenn/nextjs-promptopia/assets/69719126/e905b0b7-49bd-4659-af7a-97d8d7fdf12a)
 
 ## Features
 
